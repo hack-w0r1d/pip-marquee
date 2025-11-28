@@ -45,14 +45,6 @@ startBtn.addEventListener('click', () => {
     video.src = url;
     video.play();
 
-    // ダウンロードリンクも作る
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'marquee_video.webm';
-    a.textContent = '動画をダウンロード';
-    document.body.appendChild(a);
-  };
-
   recorder.start();
 
   let x = canvas.width;
