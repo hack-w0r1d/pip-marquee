@@ -5,58 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PiPテロップサンプル</title>
 <style>
-  body {
-    margin: 0;
-    background: transparent;
-  }
-  /* 横スクロールテロップ */
-  #marquee {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 40px;        /* テロップの高さ */
-    line-height: 40px;
-    background: rgba(0,0,0,0.5); /* Mirrativ風半透明 */
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  #marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll 10s linear infinite;
-  }
-  @keyframes scroll {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
-  }
+body {
+  margin: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 動画のサイズをある程度大きくしてPiPボタンを出す */
+#pipVideo {
+  width: 300px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: transparent;
+}
 </style>
 </head>
 <body>
-  <!-- 無音動画でPiPボタンを表示させる -->
-  <video id="pipVideo" playsinline muted autoplay loop width="200" height="112" style="position:fixed; bottom:0; right:0;">
-    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-  </video>
 
-  <div id="marquee"><span>⚡ コメントありがとう！ ⚡</span></div>
+<!-- テロップ動画（ここではサンプル動画として花ではなくテロップ用の簡易動画を使用） -->
+<video id="pipVideo" autoplay muted loop playsinline controls>
+  <source src="https://media.githubusercontent.com/media/yumekiti/pip-marquee-sample/main/scrolling-marquee.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 <script>
-  const video = document.getElementById('pipVideo');
+const video = document.getElementById('pipVideo');
 
-  // PiPボタンを自動で押せるわけではないので、ユーザー操作でPiP化
-  video.addEventListener('click', async () => {
-    try {
-      if (!document.pictureInPictureElement) {
-        await video.requestPictureInPicture();
-      } else {
-        await document.exitPictureInPicture();
-      }
-    } catch (err) {
-      console.error(err);
+// PiPボタンをクリックして切り替え（iOS Safariでユーザー操作必須）
+video.addEventListener('click', async () => {
+  try {
+    if (!document.pictureInPictureElement) {
+      await video.requestPictureInPicture();
+    } else {
+      await document.exitPictureInPicture();
     }
-  });
+  } catch (err) {
+    console.error(err);
+  }
+});
 </script>
+
 </body>
 </html>
