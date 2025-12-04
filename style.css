@@ -113,3 +113,10 @@ canvas {
     width: 90%;
     margin: 10px auto;
 }
+
+footer {
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 20%;
+    text-align: right;
+}
