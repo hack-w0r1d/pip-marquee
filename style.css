@@ -30,6 +30,10 @@ h1 {
     text-align: left;
 }
 
+input {
+    font-size: 16px;
+}
+
 button {
     color: white;
     border: none;
