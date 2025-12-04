@@ -9,8 +9,10 @@ pipBtn.addEventListener('click', async () => {
     try {
         if (!document.pictureInPictureElement) {
             await video.requestPictureInPicture();
+            pipBtn.textContent = "テロップ使用解除";
         } else {
             await document.exitPictureInPicture();
+            pipBtn.textContent = "テロップ使用";
         }
     } catch (e) {
         console.error('PiP error', e);
