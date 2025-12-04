@@ -7,16 +7,20 @@ body {
     align-items: center;
 }
 
-video, canvas {
+video {
     width: 100%;
     max-width: 800px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+canvas {
+    display: none;
 }
 
 #marquee {
     width: 100%;
-    max-width: 800px;
     text-align: center;
-    font-size: 20px;
     margin-top: 10px;
 }
 
