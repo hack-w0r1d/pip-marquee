@@ -19,22 +19,22 @@
       <h1>LiveTelop Maker</h1>
     </header>
     <div id="main-container">
-      <!-- ここに動画を表示 -->
-      <video id="pipVideo" autoplay muted loop playsinline controls></video>
-
+      <div class="guide">テロップにしたい文章を入力してください。</div>
       <input type="text" id="telopInput" placeholder="テロップにしたい文章を入力">
       <button id="updateTelopBtn">テロップ更新</button>
-
+      <div class="guide">【現在のテロップ】</div>
       <!-- Canvasで動画生成 -->
       <canvas id="canvas" width="800" height="100"></canvas>
       <div id="telopPreview">テロップ作成ボタンを押すとこちらの文章がテロップとして作成されます。</div>
       <button id="createTelopBtn">テロップ作成</button>
-      <div class="notes">
+      <!-- ここに動画を表示 -->
+      <video id="pipVideo" autoplay muted loop playsinline controls></video>
+      <div class="guide">
         ※テロップの長さや通信状況などにより作成に時間がかかることがあります。（数十秒ほど）<br>
         ※テロップがスムーズに流れない場合は再度テロップを作成してください。
       </div>
       <button id="pipBtn">テロップ使用</button>
-      <div class="explain">テロップ作成後、上記のボタンから実際にテロップとして使用することができます。</div>
+      <div class="guide">テロップ作成後、上記のボタンから実際にテロップとして使用することができます。</div>
       <script src="script.js"></script>
     </div>
     <footer>

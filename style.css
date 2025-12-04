@@ -24,10 +24,17 @@ h1 {
     text-align: center;
 }
 
+.guide {
+    width: 90%;
+    margin: 10px auto 0;
+    text-align: left;
+}
+
 button {
     color: white;
     border: none;
     border-radius: 8px;
+    margin: 20px auto 10px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -46,7 +53,7 @@ video {
     width: 90%;
     max-width: 800px;
     height: 100px;
-    margin: 25px 0 10px 0;
+    margin: 15px auto 10px;
 }
 
 canvas {
@@ -58,13 +65,10 @@ canvas {
     height: 30px;
     max-width: 777px;
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 #updateTelopBtn {
     background-color: #ff3860;
-    margin-top: 15px;
-    margin-bottom: 10px;
 }
 
 #updateTelopBtn:hover {
@@ -78,13 +82,11 @@ canvas {
 #telopPreview {
     width: 90%;
     text-align: center;
-    margin: 10px auto;
+    margin: 10px auto 0;
 }
 
 #createTelopBtn {
     background-color: #2ecc71;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 #createTelopBtn:hover {
@@ -104,8 +106,6 @@ canvas {
 
 #pipBtn {
     background-color: #1e90ff;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 #pipBtn:hover {
