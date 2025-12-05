@@ -25,13 +25,20 @@ h1 {
 }
 
 .guide {
-    width: 90%;
+    width: 85%;
     margin: 10px auto 0;
     text-align: left;
 }
 
 input {
     font-size: 18px;
+}
+
+#telopInput {
+    width: 85%;
+    height: 30px;
+    max-width: 777px;
+    margin-top: 10px;
 }
 
 button {
@@ -62,13 +69,6 @@ video {
 
 canvas {
     display: none;
-}
-
-#telopInput {
-    width: 88%;
-    height: 30px;
-    max-width: 777px;
-    margin-top: 10px;
 }
 
 #updateTelopBtn {
