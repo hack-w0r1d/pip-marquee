@@ -7,22 +7,30 @@ const preview = document.getElementById("telopPreview");
 let telopText = "テロップ作成ボタンを押すとこちらの文章がテロップとして作成されます。";
 const bgPicker = document.getElementById('bgColorPicker');
 const textPicker = document.getElementById('textColorPicker');
+const updateBgColor = () => telopPreview.style.backgroundColor = bgPicker.value;
+const updateTextColor = () => telopPreview.style.color = textPicker.value;
 
-bgPicker.addEventListener('input', () => {
-    telopPreview.style.backgroundColor = bgPicker.value;
-});
+bgPicker.addEventListener('input', updateBgColor);
+bgPicker.addEventListener('change', updateBgColor);
 
-bgPicker.addEventListener('input', () => {
-    telopPreview.style.backgroundColor = bgPicker.value;
-});
+textPicker.addEventListener('input', updateTextColor);
+textPicker.addEventListener('change', updateTextColor);
 
-textPicker.addEventListener('change', () => {
-    telopPreview.style.color = textPicker.value;
-});
+// bgPicker.addEventListener('input', () => {
+//     telopPreview.style.backgroundColor = bgPicker.value;
+// });
 
-textPicker.addEventListener('change', () => {
-    telopPreview.style.color = textPicker.value;
-});
+// bgPicker.addEventListener('input', () => {
+//     telopPreview.style.backgroundColor = bgPicker.value;
+// });
+
+// textPicker.addEventListener('change', () => {
+//     telopPreview.style.color = textPicker.value;
+// });
+
+// textPicker.addEventListener('change', () => {
+//     telopPreview.style.color = textPicker.value;
+// });
 
 pipBtn.addEventListener('click', async () => {
     try {
